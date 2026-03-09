@@ -1,0 +1,18 @@
+{
+  "projects": {
+
+    "todo_app":{
+      "files":{
+        "index.html":"<!DOCTYPE html><html><body><h1>Todo</h1><input id='task'><button onclick='add()'>Add</button><ul id='list'></ul><script src='app.js'></script></body></html>",
+        "app.js":"function add(){const t=document.getElementById('task');const li=document.createElement('li');li.innerText=t.value;document.getElementById('list').appendChild(li);}"
+      }
+    },
+
+    "express_api":{
+      "files":{
+        "server.js":"const express=require('express');const app=express();app.get('/',(req,res)=>res.send('Hello from Dolores'));app.listen(3000)"
+      }
+    }
+
+  }
+}
