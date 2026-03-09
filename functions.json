@@ -1,0 +1,12 @@
+{
+  "patterns": {
+    "javascript_function": "function {{name}}({{params}}){\n  {{body}}\n}",
+    "python_function": "def {{name}}({{params}}):\n    {{body}}",
+    "javascript_class": "class {{name}}{\n constructor({{params}}){\n  {{body}}\n }\n}"
+  },
+
+  "logic_blocks": {
+    "loop_js": "for(let i=0;i<{{count}};i++){ {{body}} }",
+    "if_js": "if({{condition}}){ {{body}} }"
+  }
+}
