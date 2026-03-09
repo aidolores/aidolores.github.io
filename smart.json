@@ -1,44 +1,96 @@
 {
-  "javascript basics": "JavaScript is a high-level, interpreted language for web development. Supports ES6+ features like arrow functions, classes, async/await, modules.",
-  "javascript dom": "The DOM allows JS to manipulate HTML elements: document.getElementById('id').innerText = 'Hello'; document.querySelector('.class').style.color = 'red';",
-  "javascript async": "Async programming uses Promises and async/await. Example: async function fetchData(){ const res = await fetch(url); const data = await res.json(); return data; }",
-  "javascript frameworks": "React, Vue, Angular are popular JS frameworks for building dynamic web apps. Use state management and components for scalable apps.",
-  "python basics": "Python is an interpreted, high-level language supporting OOP, functional programming, scripting. Example: print('Hello Python')",
-  "python data structures": "Python has lists, dicts, sets, tuples. Example: my_list=[1,2,3]; my_dict={'a':1}; my_set={1,2}; tuple=(1,2)",
-  "python advanced": "Decorators, generators, context managers, async/await, type hints, Pythonic idioms, data classes, list comprehensions.",
-  "c++ basics": "C++ is compiled, high-performance. Supports OOP, templates, STL. Example: #include<iostream> int main(){ std::cout << 'Hello'; return 0; }",
-  "c++ advanced": "Pointers, references, memory management, templates, inheritance, polymorphism, move semantics, RAII, smart pointers, STL algorithms.",
-  "java basics": "Java runs on JVM, strongly typed OOP language. Example: public class Main { public static void main(String[] args){ System.out.println('Hello'); } }",
-  "java advanced": "Generics, concurrency, streams, lambdas, design patterns (Singleton, Observer), Spring Boot for web apps.",
-  "html basics": "HTML structures web pages. Use tags like <div>, <p>, <h1>. Semantic HTML improves accessibility.",
-  "css basics": "CSS styles pages: selectors, flexbox, grid, transitions, animations. Example: div{display:flex;justify-content:center;}",
-  "css advanced": "CSS variables, keyframe animations, responsive design, media queries, pseudo-elements (:before, :after), complex layouts.",
-  "sql basics": "SQL manages relational databases: SELECT, INSERT, UPDATE, DELETE. Example: SELECT name FROM users WHERE age>18;",
-  "sql advanced": "Joins, subqueries, indexes, transactions, normalization, views, stored procedures, triggers, performance optimization.",
-  "data structures": "Arrays, linked lists, stacks, queues, trees, graphs, hash maps, heaps. Understand Big-O complexity.",
-  "algorithms": "Sorting (quick, merge, bubble), searching (binary, DFS/BFS), dynamic programming, recursion, greedy algorithms.",
-  "apis": "APIs allow software to communicate. Use fetch/axios in JS, requests in Python. RESTful and GraphQL patterns.",
-  "web development": "Frontend: HTML/CSS/JS (+frameworks). Backend: Node.js, Django, Flask, Spring Boot. Databases: SQL/NoSQL. Full-stack integration.",
-  "machine learning": "ML trains models to make predictions. Libraries: scikit-learn, TensorFlow, PyTorch. Concepts: supervised, unsupervised, regression, classification.",
-  "cloud computing": "AWS, Azure, GCP provide storage, serverless functions, containers, VM instances, scaling solutions.",
-  "network basics": "TCP/IP, HTTP/HTTPS, DNS, client-server, sockets, REST APIs, WebSockets, SSL/TLS.",
-  "security basics": "HTTPS, input sanitization, password hashing (bcrypt), JWT/OAuth2.0, CORS, XSS/SQL injection prevention.",
-  "math basics": "Algebra, geometry, calculus, probability, statistics, linear algebra, discrete math, combinatorics.",
-  "physics basics": "Mechanics, thermodynamics, electromagnetism, optics, quantum basics.",
-  "chemistry basics": "Periodic table, bonding, reactions, stoichiometry, acids/bases, organic chemistry basics.",
-  "biology basics": "Cell structure, genetics, evolution, human anatomy, ecosystems.",
-  "geography basics": "Continents, countries, capitals, major rivers, mountains, timezones.",
-  "history basics": "Major world events, civilizations, wars, revolutions, technological milestones.",
-  "finance basics": "Budgeting, saving, investment types, stocks, bonds, crypto, compound interest.",
-  "example js file": "console.log('Hello World'); function add(a,b){ return a+b; }",
-  "example python file": "def add(a,b):\n    return a+b\nprint(add(5,3))",
-  "example html file": "<!DOCTYPE html><html><head><title>Page</title></head><body><h1>Hello World</h1></body></html>",
-  "example css file": "body { background-color:#1b0f33; color:white; font-family:Arial,sans-serif; }",
-  "example java file": "public class HelloWorld { public static void main(String[] args) { System.out.println('Hello World'); } }",
-  "example c++ file": "#include <iostream>\nint main(){ std::cout << 'Hello World'; return 0; }",
-  "writing email": "Use professional greeting, clear paragraphs, polite tone. Example: Dear [Name],\n\nI hope this email finds you well...",
-  "writing essay": "Start with introduction, body paragraphs, conclusion. Support arguments with evidence. Maintain formal tone.",
-  "current news": "Dolores can summarize news from trusted sources (requires online API integration).",
-  "weather info": "Dolores can provide local weather if location API is available.",
-  "tech updates": "Dolores can explain the latest in tech trends, frameworks, programming news."
+  "javascript closures": "A closure is when a function remembers variables from its outer scope even after the outer function has finished executing.",
+  "javascript event loop": "The JavaScript event loop handles asynchronous callbacks using a call stack, callback queue, and microtask queue.",
+  "javascript promises": "Promises represent asynchronous operations. States: pending, fulfilled, rejected.",
+  "javascript async await": "async/await simplifies promises. Example: const data = await fetch(url).then(r=>r.json());",
+  "javascript fetch": "Fetch is used for HTTP requests. Example: fetch('/api').then(r=>r.json()).then(data=>console.log(data));",
+  "javascript array methods": "Common methods include map, filter, reduce, find, some, every, and forEach.",
+  "javascript classes": "Classes define blueprints for objects. Example: class Car { constructor(name){ this.name=name } }",
+  "javascript modules": "Modules use import/export. Example: export function add(a,b){ return a+b }",
+
+  "python decorators": "Decorators wrap functions to modify behavior. Example: @login_required",
+  "python generators": "Generators yield values lazily using the yield keyword.",
+  "python async": "Async Python uses async def and await with event loops.",
+  "python list comprehension": "List comprehensions provide concise loops: [x*x for x in range(10)]",
+  "python flask": "Flask is a lightweight Python web framework.",
+  "python django": "Django is a full-stack Python web framework.",
+
+  "c++ pointers": "Pointers store memory addresses. Example: int* p = &x;",
+  "c++ references": "References are aliases for variables using &.",
+  "c++ stl": "The Standard Template Library includes vector, map, set, and algorithms.",
+  "c++ smart pointers": "unique_ptr and shared_ptr manage memory automatically.",
+
+  "java streams": "Streams process collections with functional operations like map, filter, reduce.",
+  "java concurrency": "Java concurrency uses threads, executors, and synchronized blocks.",
+  "java spring boot": "Spring Boot simplifies Java web services and APIs.",
+
+  "html semantic tags": "Semantic tags improve accessibility: header, nav, main, article, footer.",
+  "css flexbox": "Flexbox aligns items in rows or columns. Example: display:flex;",
+  "css grid": "Grid layouts use rows and columns with grid-template.",
+  "css animations": "CSS animations use @keyframes and animation properties.",
+
+  "sql joins": "SQL joins combine rows from multiple tables. Types: INNER, LEFT, RIGHT, FULL.",
+  "sql indexing": "Indexes speed up database queries.",
+  "sql transactions": "Transactions ensure ACID properties in databases.",
+
+  "rest api": "REST APIs use HTTP methods GET POST PUT DELETE and JSON responses.",
+  "graphql": "GraphQL allows clients to request exactly the data they need.",
+  "websockets": "WebSockets allow real-time communication between client and server.",
+
+  "docker basics": "Docker packages applications in containers.",
+  "kubernetes basics": "Kubernetes orchestrates container deployments.",
+  "ci cd": "CI/CD automates build, test, and deployment pipelines.",
+
+  "algorithms sorting": "Common sorts include quicksort, mergesort, heapsort, and bubble sort.",
+  "binary search": "Binary search works on sorted arrays with O(log n) complexity.",
+  "hash tables": "Hash tables map keys to values using hash functions.",
+
+  "example javascript project": "Example JavaScript project generated by Dolores.",
+  "example python project": "Example Python project generated by Dolores.",
+
+  "generator todo app": {
+    "files": {
+      "index.html": "<!DOCTYPE html><html><head><title>Todo</title><link rel='stylesheet' href='style.css'></head><body><h1>Todo App</h1><input id='task'><button onclick='addTask()'>Add</button><ul id='list'></ul><script src='app.js'></script></body></html>",
+      "style.css": "body{font-family:Arial;background:#1b0f33;color:white;text-align:center}button{background:#7a2cff;color:white;border:none;padding:8px 12px}",
+      "app.js": "function addTask(){const t=document.getElementById('task');const li=document.createElement('li');li.innerText=t.value;document.getElementById('list').appendChild(li);t.value=''}"
+    }
+  },
+
+  "generator express api": {
+    "files": {
+      "server.js": "const express=require('express');const app=express();app.get('/',(req,res)=>res.send('Hello from Dolores'));app.listen(3000)"
+    }
+  },
+
+  "generator static website": {
+    "files": {
+      "index.html": "<!DOCTYPE html><html><head><title>Website</title><link rel='stylesheet' href='style.css'></head><body><h1>Hello from Dolores</h1></body></html>",
+      "style.css": "body{font-family:sans-serif;background:#1b0f33;color:white;text-align:center}"
+    }
+  },
+
+  "debug javascript undefined": "A variable may not be declared. Check let/const scope.",
+  "debug cors": "Enable CORS headers or use a proxy server.",
+  "debug python indentation": "Python requires consistent indentation using spaces.",
+  "debug memory leak": "Ensure unused references are cleared and objects are garbage collected.",
+
+  "math calculus": "Calculus studies change using derivatives and integrals.",
+  "math linear algebra": "Linear algebra deals with vectors, matrices, and transformations.",
+  "math probability": "Probability measures likelihood of events.",
+
+  "physics relativity": "Einstein's relativity describes space-time and gravity.",
+  "physics quantum": "Quantum mechanics studies particles at atomic scales.",
+
+  "chemistry periodic table": "The periodic table organizes elements by atomic number.",
+  "biology genetics": "Genetics studies heredity and DNA.",
+
+  "history world war 2": "World War II occurred from 1939 to 1945 involving most global nations.",
+  "geography continents": "Earth has 7 continents.",
+
+  "finance investing": "Investing grows wealth using stocks, bonds, ETFs, and real estate.",
+  "finance compound interest": "Compound interest earns interest on both principal and previous interest.",
+
+  "tech ai": "Artificial intelligence allows machines to perform tasks requiring human intelligence.",
+  "tech blockchain": "Blockchain is a distributed ledger technology used in cryptocurrencies.",
+  "tech quantum computing": "Quantum computers use qubits to perform certain computations faster."
 }
